@@ -118,7 +118,7 @@ send_snapshot() {
 	# Save SMB snapshot
 	if [ "$smb_snapshot" = true ]; then
 		(
-		smbclient_cmd="/system/bin/smbclient $smb_share"
+		smbclient_cmd="/system/sdcard/bin/smbclient $smb_share"
 		if [ "$smb_password" != "" ]; then
 			smbclient_cmd="$smbclient_cmd $smb_password"
 		else
@@ -311,7 +311,7 @@ fi
 # SMB snapshot and video
 if [ "$smb_video" = true ]; then
 	(
-	smbclient_cmd="/system/bin/smbclient $smb_share"
+	smbclient_cmd="/system/sdcard/bin/smbclient $smb_share"
 	if [ "$smb_password" != "" ]; then
 		smbclient_cmd="$smbclient_cmd $smb_password"
 	else
